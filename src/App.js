@@ -1,6 +1,3 @@
-
-App.js :
-
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import NewsList from './NewsList';
