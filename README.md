@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Acowale News 📰
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Acowale News is a sleek, responsive news application that fetches the latest news articles using the [gnews.io](https://gnews.io) API. This project is designed to showcase a mobile-first design approach with a powerful backend that handles pagination, search, and more. Hosted on Firebase, this app is an elegant, real-time solution for consuming news.
 
-## Available Scripts
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Setup Instructions](#setup-instructions)
+- [Process](#process)
+- [Future Improvements](#future-improvements)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
+- 🌐 **Responsive Design**: Optimized for mobile, tablet, and desktop screens.
+- 🔍 **Search Functionality**: Search news articles by keywords.
+- 📄 **Pagination**: Efficiently handles pagination for large news data sets.
+- 📰 **Live News Feed**: Fetches news articles in real-time using the GNews API.
+- 🚀 **Hosted on Vercel**: Fast and reliable hosting.
+Completed the front end but couldnt host it on firebase as it showed some payment terms like :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  [ ### Error: Your project aconews-9078d must be on the Blaze (pay-as-you-go) plan to complete this command. Required API cloudbuild.googleapis.com can't be enabled until the upgrade is complete. To upgrade, visit the following URL:
 
-### `npm test`
+https://console.firebase.google.com/project/aconews-9078d/usage/details ]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Tech Stack
+- **Frontend**: React, CSS
+- **Backend**: Node.js (Hosted on Vercel)
+- **API**: [gnews.io](https://gnews.io) for news articles
+- **Hosting**: *Firebase (Frontend), Vercel (Backend)
+- **Utilities**: Lodash (for debouncing search), Fetch API for HTTP requests
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Step 1: Clone the Repository
+```bash
+git clone  https://github.com/Pavithrabalakumaran/aconews.git
+cd aconews
 
-### `npm run eject`
+Step 2: Install Dependencies
+   Make sure you have Node.js installed, then run:
+   npm install 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Step 3: Create a .env File
+   Create a .env file in the root directory with the following environment variables:
+   REACT_APP_API_KEY= 84619a9d374ff467a684e3895e998a8f
+   REACT_APP_API_URL=https://news-api-g2dn26i4g-pavithra-sri-bhavani-ccs-projects.vercel.app
+Get your GNews API key from gnews.io.
+REACT_APP_API_URL should point to your backend hosted on Vercel (or a similar service).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Step 4: Run the App Locally:
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Process
+Getting the API Key: The first step was acquiring an API key from gnews.io to interact with their API and fetch news articles.
+Frontend Development: Developed a responsive React-based UI with components such as Header, NewsList, and Footer. Integrated Lodash’s debounce feature for search to improve performance.
+Backend Setup: Created a backend that handles API requests and pagination. Hosted the backend on Vercel, ensuring efficient and quick API response times.

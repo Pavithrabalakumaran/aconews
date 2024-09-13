@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 
 const NewsCard = ({ article }) => {
-  const { title, description, urlToImage, url, image } = article;
+  const { title, description, url, image } = article;
 
   return (
     <div className="news-card">

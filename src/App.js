@@ -11,7 +11,7 @@ const App = () => {
 
   const fetchNews = async (searchQuery = 'latest', page = 1, limit = 10) => {
     const API_KEY = '84619a9d374ff467a684e3895e998a8f';
-    const REACT_APP_API_URL= "https://news-api-g2dn26i4g-pavithra-sri-bhavani-ccs-projects.vercel.app"
+    
 
     try {
       const response = await fetch(`${process.env.REACT_APP_API_URL}/getNews?query=${query}&page=${page}&limit=${limit}`);
