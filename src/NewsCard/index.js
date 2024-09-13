@@ -2,11 +2,11 @@ import React from 'react';
 import './index.css';
 
 const NewsCard = ({ article }) => {
-  const { title, description, urlToImage, url } = article;
+  const { title, description, urlToImage, url, image } = article;
 
   return (
     <div className="news-card">
-      <img src={urlToImage} alt={title} className="news-image" />
+      <img src={image} alt={title} className="news-image" />
       <div className="news-content">
         <h3 className="news-title">{title}</h3>
         <p className="news-description">{description}</p>

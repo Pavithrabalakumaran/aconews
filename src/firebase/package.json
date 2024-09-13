@@ -1,0 +1,22 @@
+{
+    "functions": {
+      "source": "functions",
+      "runtime": "nodejs18"
+    }
+  }
+
+
+
+
+
+{
+    "name": "your-app",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "axios": "^0.21.1"
+    }
+  }
