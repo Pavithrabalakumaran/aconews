@@ -4,7 +4,6 @@ import NewsList from './NewsList';
 import Footer from './Footer';
 import './App.css';
 import debounce from 'lodash.debounce'; 
-import {firestore} from "../src/firebase";
 
 const App = () => {
   const [articles, setArticles] = useState([]);
@@ -48,7 +47,7 @@ const App = () => {
   const handleSearch = debounce((searchTerm) => {
     setQuery(searchTerm);
     fetchNews(searchTerm);
-  }, 500); // Debounce for 500ms delay
+  }, 500); 
 
   return (
     <div className="app">
